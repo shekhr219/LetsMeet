@@ -3,8 +3,9 @@ var myPeerId;
 var peerList = [];
 var peer = new Peer(undefined, {
   path: "/peerjs",
+  secure: true,
   host: "/",
-  port: "8080",
+  port: "443",
 });
 peer.on("open", (id) => {
   socket.emit("join-room", ROOM_ID, id);
